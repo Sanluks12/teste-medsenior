@@ -11,9 +11,11 @@ import Page from '../components/page';
 import Container from '../components/container';
 
 const schema = Yup.object().shape({
-	email: Yup.string().email('Email Inválido!').required('Este campo é obrigatório!'),
+		email: Yup.string()
+		.email('Email Inválido!')
+		.required('Preencha o campo obrigatório!'),
 	password: Yup.string()
-		.required('Este campo é obrigatório!')
+		.required('Preencha o campo obrigatório!')
 		.min(6, 'A senha deve conter no mínimo 6 caracteres!'),
 });
 
